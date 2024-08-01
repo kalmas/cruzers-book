@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "cruzers-book"
+version = "0.1.0"
+description = ""
+authors = ["kalmas <kyle.almas@terazo.com>"]
+readme = "README.md"
+packages = [
+    { include = "cruzers_book" }
+]
+
+[tool.poetry.scripts]
+to-pages = "cruzers_book.to_pages:main"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pdf2image = "^1.17.0"
+opencv-python = "^4.10.0.84"
+pytesseract = "^0.3.10"
+matplotlib = "^3.9.1"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
